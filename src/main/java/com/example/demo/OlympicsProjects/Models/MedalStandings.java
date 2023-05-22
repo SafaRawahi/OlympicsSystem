@@ -16,7 +16,7 @@ public class MedalStandings extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
-     String country;
+    String country;
     Integer goldMedals;
     Integer silverMedals;
     Integer bronzeMedals;

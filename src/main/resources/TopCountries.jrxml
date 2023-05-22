@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TopCountries" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3f2a571f-03aa-49a5-8941-9547124b15b9">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TopCountry" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="db1fc023-7e6b-4822-bb02-3721bad61372">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
 
     <field name="country" class="java.lang.String">
 
@@ -14,18 +16,18 @@
     <title>
         <band height="72">
             <frame>
-                <reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="39706410-ada3-4f3e-8cf3-f625dae300b7"/>
+                <reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="8e49a979-a883-4f92-aaab-757d5b095a19"/>
                 <staticText>
-                    <reportElement x="102" y="0" width="390" height="43" forecolor="#FFFFFF" uuid="c9405c28-7eba-4a1c-852c-310b66cf71b8"/>
-                    <textElement textAlignment="Center">
-                        <font size="34" isBold="false"/>
+                    <reportElement x="130" y="10" width="340" height="43" forecolor="#FFFFFF" uuid="9195f544-5b29-4943-b9ce-63e0e92d128d"/>
+                    <textElement>
+                        <font size="33" isBold="true"/>
                     </textElement>
                     <text><![CDATA[OLYMPICS SYSTEM]]></text>
                 </staticText>
                 <staticText>
-                    <reportElement x="160" y="50" width="235" height="37" forecolor="#FFFFFF" uuid="7dc8e82f-8d3f-47a9-9d42-54c9f34e08f5"/>
+                    <reportElement x="210" y="53" width="195" height="30" forecolor="#FFFFFF" uuid="484090ca-9ad3-4f95-8276-0d020ad48683"/>
                     <textElement textAlignment="Center">
-                        <font fontName="Constantia" size="18" isBold="true"/>
+                        <font size="16" isBold="false"/>
                     </textElement>
                     <text><![CDATA[Top Countries]]></text>
                 </staticText>
@@ -38,11 +40,11 @@
     <columnHeader>
         <band height="21">
             <line>
-                <reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="e692fbd0-77ae-4fb6-8c0c-7da7ea28effb"/>
+                <reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="7f6dac56-f0d3-4f1e-993b-9806c79d79a1"/>
             </line>
             <staticText>
-                <reportElement mode="Opaque" x="0" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f6ec5fff-d6cf-4d25-9c2c-89d82ef72f62">
-                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bb34f2cd-8d74-4a5c-a149-a3d4a9ecf2d6"/>
+                <reportElement mode="Opaque" x="0" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="975c5a55-a5b5-466b-b4b1-8e9706df3551">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2c6b343f-70d2-4c8e-8102-f1500fb1bfcf"/>
                 </reportElement>
                 <textElement textAlignment="Center">
                     <font size="14" isBold="true"/>
@@ -50,8 +52,8 @@
                 <text><![CDATA[country]]></text>
             </staticText>
             <staticText>
-                <reportElement mode="Opaque" x="277" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="8685e7f6-9b14-4c42-bb1b-a27c43ec3cc8">
-                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3276c760-70dc-4603-a58d-7ca0585d8a2d"/>
+                <reportElement mode="Opaque" x="277" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="e677859c-5d1c-4c48-9e53-2082383b33e5">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e6493d2a-9099-4227-b61f-f005e83dff70"/>
                 </reportElement>
                 <textElement textAlignment="Center">
                     <font size="14" isBold="true"/>
@@ -63,11 +65,11 @@
     <detail>
         <band height="20">
             <line>
-                <reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="d16cad95-8ca6-4a26-bbb6-b8886a841aec"/>
+                <reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="f2345d21-87e3-4e2c-b83f-dd4d530b350e"/>
             </line>
             <textField textAdjust="StretchHeight">
-                <reportElement x="0" y="0" width="277" height="20" uuid="ddc821d6-12e1-4d00-a4ea-f42bd6e9a7d7">
-                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bb34f2cd-8d74-4a5c-a149-a3d4a9ecf2d6"/>
+                <reportElement x="0" y="0" width="277" height="20" uuid="f202a93b-913c-4f0e-9cd5-bf808a03b8cc">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2c6b343f-70d2-4c8e-8102-f1500fb1bfcf"/>
                 </reportElement>
                 <textElement>
                     <font size="14"/>
@@ -75,8 +77,8 @@
                 <textFieldExpression><![CDATA[$F{country}]]></textFieldExpression>
             </textField>
             <textField textAdjust="StretchHeight">
-                <reportElement x="277" y="0" width="277" height="20" uuid="46318639-4177-45f3-86d9-1509d8464c4f">
-                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3276c760-70dc-4603-a58d-7ca0585d8a2d"/>
+                <reportElement x="277" y="0" width="277" height="20" uuid="edefb619-3311-4566-9613-7ab8d7d415bf">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e6493d2a-9099-4227-b61f-f005e83dff70"/>
                 </reportElement>
                 <textElement>
                     <font size="14"/>
@@ -91,16 +93,16 @@
     <pageFooter>
         <band height="17">
             <textField>
-                <reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="b328207b-3502-48ce-9e99-f6bdd51c0d09"/>
+                <reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="b2be9ec6-7a17-42ea-9433-2e6d86a94e2d"/>
                 <textElement textAlignment="Right"/>
                 <textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
             </textField>
             <textField evaluationTime="Report">
-                <reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="2c646ed8-3f4e-498a-bcbc-052a0ee09c01"/>
+                <reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="accd455b-5be7-4e8d-84f4-5bf6bef30dcf"/>
                 <textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
             </textField>
             <textField pattern="EEEEE dd MMMMM yyyy">
-                <reportElement x="0" y="4" width="100" height="13" uuid="3554a4c5-f8ad-4e4e-ba7b-e5ac32d18bca"/>
+                <reportElement x="0" y="4" width="100" height="13" uuid="950a344b-8194-4c07-ac89-62c4e293a418"/>
                 <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
             </textField>
         </band>

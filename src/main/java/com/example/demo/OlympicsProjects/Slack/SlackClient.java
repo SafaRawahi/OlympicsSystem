@@ -10,7 +10,8 @@ public class SlackClient {
     public String sendMessage(String text) {
 
         return WebClient.create().post()
-                .uri("https://hooks.slack.com/services/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")
+                .uri("")
+// "https://hooks.slack.com/services/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"
 
                 .contentType(MediaType.APPLICATION_JSON)
                 .bodyValue(new SlackPayload(text))

@@ -25,7 +25,7 @@ public class ReportServices {
     MedalStandingsRepository medalStandingsRepository;
     public static final String pathToReports = "C:\\Users\\user015\\Downloads\\OlympicsSystemReports";
 
-    public String generatePerformanceOfTheOlympicsReport() throws FileNotFoundException, JRException {
+    public String generatePerformanceOfTheOlympicsReport() throws FileNotFoundException, JRException {   //generatePerformanceOfTheOlympicsReport
         List<Event> eventList = eventRepository.getAllEvents();
         List<PerformanceOfTheOlympicsDTO> performanceOfTheOlympicsDTOS = new ArrayList<>();
         for (Event events : eventList) {
