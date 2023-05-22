@@ -27,4 +27,9 @@ public class AthletesServices {
       Athletes athletes = athletesRepository.getAthletesByName(name);
          return athletes;
     }
+
+    public  List<Athletes> getAthletesByNationality(String nationality) {              //getAthletesByNationality
+        return athletesRepository.getAthletesByNationality(nationality);
+
+    }
 }

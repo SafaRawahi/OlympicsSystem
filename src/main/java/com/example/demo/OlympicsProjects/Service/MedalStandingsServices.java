@@ -14,6 +14,7 @@ public class MedalStandingsServices {
     MedalStandingsRepository medalStandingsRepository;
 
     public List<MedalStandings> getAllMedals() {      //getAllMedals
+
         return medalStandingsRepository.getAllMedals();
     }
 }
