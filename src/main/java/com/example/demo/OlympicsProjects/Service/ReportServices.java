@@ -2,8 +2,11 @@ package com.example.demo.OlympicsProjects.Service;
 
 
 import com.example.demo.OlympicsProjects.DTO.PerformanceOfTheOlympicsDTO;
+import com.example.demo.OlympicsProjects.DTO.TopCountriesDTO;
 import com.example.demo.OlympicsProjects.Models.Event;
+import com.example.demo.OlympicsProjects.Models.MedalStandings;
 import com.example.demo.OlympicsProjects.Repository.EventRepository;
+import com.example.demo.OlympicsProjects.Repository.MedalStandingsRepository;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -18,6 +21,8 @@ import java.util.*;
 public class ReportServices {
     @Autowired
     EventRepository eventRepository;
+    @Autowired
+    MedalStandingsRepository medalStandingsRepository;
     public static final String pathToReports = "C:\\Users\\user015\\Downloads\\OlympicsSystemReports";
 
     public String generatePerformanceOfTheOlympicsReport() throws FileNotFoundException, JRException {
@@ -45,8 +50,23 @@ public class ReportServices {
     }
 
     public String TopCountriesReport() throws JRException  {
-return "";
+     List<MedalStandings>  medalStandingsList= medalStandingsRepository.getgoldMedals();
+     List<TopCountriesDTO> topCountriesDTOS=new ArrayList<>();
+     for ( MedalStandings medals : medalStandingsList){
+         String country = medals.getCountry();
+         Integer goldMedals = medals.getGoldMedals();
+         TopCountriesDTO topCountriesDTO = new TopCountriesDTO(country,goldMedals);
+         topCountriesDTOS.add(topCountriesDTO);
+     }
 
+        File file = new File("C:\\Users\\user015\\Documents\\demo.OlympicsProjects\\demo.OlympicsProjects\\src\\main\\resources\\TopCountries.jrxml");
+        JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
+        JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(topCountriesDTOS);
+        Map<String, Object> paramters = new HashMap<>();
+        paramters.put("CreatedBy", "MyName");
+        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, paramters, dataSource);
+        JasperExportManager.exportReportToPdfFile(jasperPrint, pathToReports + "\\TopCountries.pdf");
+        return "Report generated : " + pathToReports + "\\TopCountries.pdf";
 
     }
 }
