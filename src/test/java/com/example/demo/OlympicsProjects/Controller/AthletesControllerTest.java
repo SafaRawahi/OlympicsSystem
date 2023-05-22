@@ -32,7 +32,7 @@ AthletesController athletesController;
         assertEquals(3,id);
     }
     @Test
-    void getAthletesByNameInvalid() throws Exception  {
+    void getAthletesByNameInvalid() throws Exception  {   //getAthletesByNameInvalid()
         Athletes athletesTest;
         athletesTest = athletesController.getAthletesByName("Nasser");
         int id = athletesTest.getId();
