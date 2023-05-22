@@ -50,7 +50,7 @@ public class ReportServices {
     }
 
     public String TopCountriesReport() throws JRException  {
-     List<MedalStandings>  medalStandingsList= medalStandingsRepository.getgoldMedals();
+     List<MedalStandings>  medalStandingsList= medalStandingsRepository.getGoldMedals();
      List<TopCountriesDTO> topCountriesDTOS=new ArrayList<>();
      for ( MedalStandings medals : medalStandingsList){
          String country = medals.getCountry();
