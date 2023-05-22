@@ -1,5 +1,6 @@
 package com.example.demo.OlympicsProjects.Controller;
 
+import com.example.demo.OlympicsProjects.Models.Athletes;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,5 +23,21 @@ AthletesController athletesController;
         String athleteName = athletesController.getAthletesById(2).getName();
         assertNotEquals("Ali",athleteName);
     }
+
+    @Test
+    void getAthletesByName() throws Exception  {
+        Athletes athletesTest;
+        athletesTest = athletesController.getAthletesByName("Nasser");
+        int id = athletesTest.getId();
+        assertEquals(3,id);
+    }
+    @Test
+    void getAthletesByNameInvalid() throws Exception  {
+        Athletes athletesTest;
+        athletesTest = athletesController.getAthletesByName("Nasser");
+        int id = athletesTest.getId();
+        assertNotEquals(2,id);
+    }
+
 
 }
