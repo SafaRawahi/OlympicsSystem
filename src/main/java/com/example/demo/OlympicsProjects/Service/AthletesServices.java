@@ -32,4 +32,8 @@ public class AthletesServices {
         return athletesRepository.getAthletesByNationality(nationality);
 
     }
+
+    public List<Athletes> getAthletesBySport(String sport) {          //getAthletesBySport
+        return athletesRepository.getAthletesBySport(sport);
+    }
 }

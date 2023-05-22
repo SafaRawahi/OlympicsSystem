@@ -44,4 +44,10 @@ public class AthletesController {
         athletesList = athletesServices.getAthletesByNationality(nationality);
         return athletesList;
     }
+    @RequestMapping(value = "getBySport")
+    public List<Athletes> getAthletesBySport(@RequestParam String Sport) {         //getAthletesBySport
+        List<Athletes> athletesList = new ArrayList<>();
+        athletesList = athletesServices.getAthletesBySport(Sport);
+        return athletesList;
+    }
 }

@@ -21,4 +21,7 @@ public interface AthletesRepository extends JpaRepository<Athletes, Integer> {
 
     @Query(value = " SELECT a from Athletes a where a.nationality = :nationality")     //getAthletesByNationality
     List<Athletes> getAthletesByNationality(String nationality);
+
+    @Query(value = " SELECT a from Athletes a where a.sport = :sport")             //getAthletesBySport
+    List<Athletes> getAthletesBySport(String sport);
 }
