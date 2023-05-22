@@ -17,6 +17,10 @@ AthletesController athletesController;
         String athleteName = athletesController.getAthletesById(1).getName();
         assertEquals("Ali",athleteName);
     }
-
+    @Test
+    void getAthletesByIdInvalid() throws Exception{
+        String athleteName = athletesController.getAthletesById(2).getName();
+        assertNotEquals("Ali",athleteName);
+    }
 
 }
