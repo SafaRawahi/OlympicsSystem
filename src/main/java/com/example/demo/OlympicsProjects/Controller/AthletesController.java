@@ -50,4 +50,5 @@ public class AthletesController {
         athletesList = athletesServices.getAthletesBySport(Sport);
         return athletesList;
     }
+
 }
